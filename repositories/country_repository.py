@@ -19,7 +19,6 @@ def select(id):
     if results:
         result = results[0]
         country = Country(result['country_name'], result['is_visited'], result['id'])
-
     return country
 
 def select_all():

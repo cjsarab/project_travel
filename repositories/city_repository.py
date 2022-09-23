@@ -21,7 +21,6 @@ def select(id):
     if results:
         result = results[0]
         city = City(result['city_name'], result['is_visited'], result['country_id'], result['id'])
-
     return city
 
 def select_all():
