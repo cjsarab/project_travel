@@ -10,14 +10,14 @@ CREATE TABLE countries (
 
 CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
-    city_name VARCHAR (255)
-    is_visited BOOLEAN DEFAULT false
+    city_name VARCHAR (255),
+    is_visited BOOLEAN DEFAULT false,
     country_id INT NOT NULL REFERENCES countries(id) ON DELETE CASCADE
-)
+);
 
 CREATE TABLE sights (
     id SERIAL PRIMARY KEY,
-    sight_name VARCHAR (255)
-    is_visited BOOLEAN DEFAULT false
+    sight_name VARCHAR (255),
+    is_visited BOOLEAN DEFAULT false,
     city_id INT NOT NULL REFERENCES cities(id) ON DELETE CASCADE
-)
+);
