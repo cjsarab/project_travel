@@ -6,7 +6,7 @@ from models.sight import Sight
 
 def save(sight):
     sql = "INSERT INTO sights (sight_name, is_visited, city_id) VALUES (%s, %s, %s) RETURNING *"
-    values = [sight.sight_name, sight.is_visited, sight.city_id]
+    values = [sight.sight_name, sight.is_visited, sight.city.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     sight.id = id

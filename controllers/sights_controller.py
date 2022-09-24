@@ -1,7 +1,6 @@
 from http.client import USE_PROXY
 from flask import Flask, render_template, request, redirect, Blueprint
 from repositories import city_repository, sight_repository
-from models.city import City
 from models.sight import Sight
 
 sights_blueprint = Blueprint("sights", __name__)
