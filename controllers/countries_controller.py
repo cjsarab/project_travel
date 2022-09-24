@@ -10,7 +10,7 @@ countries_blueprint = Blueprint("countries", __name__)
 @countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
-    return render_template("countries/index.html", allcountries = countries)
+    return render_template("countries/index.html", all_countries = countries)
 
 @countries_blueprint.route("/countries/new")
 def new_country():
@@ -20,7 +20,7 @@ def new_country():
 def create_country():
     country_name = request.form['country_name']
     is_visited = request.form['is_visited']
-    
+
     new_country = Country(country_name, is_visited)
     country_repository.save(new_country)
     return redirect ('/countries')
