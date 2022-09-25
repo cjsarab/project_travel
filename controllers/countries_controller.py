@@ -33,7 +33,7 @@ def show_country(id):
 @countries_blueprint.route("/countries/<id>/edit")
 def edit_country(id):
     country = country_repository.select(id)
-    return render_template('countries/edit.html', country = country, all_countries = countries)
+    return render_template('countries/edit.html', country = country)
 
 @countries_blueprint.route("/countries/<id>", methods=['POST'])
 def update_country(id):
