@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for country in all_countries %}
+
+<div class="countries">
+    <div class="content">
+        <a href="/countries/{{country.id}}">{{country.country_name}}</a>
+        <div>
+            <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
+                <button class="material-symbols-outlined">delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endfor%}
+
+{% endblock %}
