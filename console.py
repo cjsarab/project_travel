@@ -16,7 +16,7 @@ country_1 = Country("France", False)
 country_repository.save(country_1)
 country_2 = Country("Germany", False)
 country_repository.save(country_2)
-country_3 = Country("Italy", False)
+country_3 = Country("Italy", True)
 country_repository.save(country_3)
 
 city_1 = City("Paris", False, country_1)

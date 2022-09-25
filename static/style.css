@@ -82,7 +82,7 @@ hr {
     line-height: 60px;
     margin: 16px;
     font-size: 200%;
-
+    list-style-type:none;
 }
 
 .single_container {
@@ -96,4 +96,12 @@ hr {
     min-height: 75px;
     min-width: 75px;
     margin: 0
+}
+
+.green-text {
+    color: lime;
+}
+
+.red-text {
+    color: firebrick;
 }
