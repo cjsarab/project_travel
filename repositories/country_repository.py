@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 
 from models.country import Country
+from models.city import City
 
 def save(country):
     sql = "INSERT INTO countries (country_name, is_visited) VALUES (%s, %s) RETURNING *"
@@ -44,3 +45,15 @@ def delete(id):
 def delete_all():
     sql = "DELETE FROM countries"
     run_sql(sql)
+
+def select_all_cities_from_country(id):
+    cities = []
+    sql = "SELECT * FROM cities WHERE country_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        country = select(row['country_id'])
+        city = City(row['city_name'], row['is_visited'], country, row['id'])
+        cities.append(city)
+    return cities
