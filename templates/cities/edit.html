@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="cities">
+<form action="/cities/{{city.id}}" method="post">
+    <div>
+        <label for="city_name">City Name: </label>
+        <input type="text" id="city_name" name="city_name" value="{{city.city_name}}" required autofocus>
+    </div>
+
+    <div>
+        <label for="is_visited">Visited</label>
+        <select id="is_visited" name="is_visited">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+    </div>
+
+    <button type="submit">Update City</button>
+
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="cities">
+    {{city.city_name}}
+    <br>
+    {% if city.is_visited %}
+    <span class="green-text">Visited </span>
+    {% else %}
+    <span class="red-text">Not Visited</span>
+    {% endif %}
+    
+    <li title="Edit"><a href="/cities/{{city.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+    <li title="New Sight"><a href="/sights/new"><span class="material-symbols-outlined">add_location</span></a></li>
+
+</div>
+
+{% endblock %}

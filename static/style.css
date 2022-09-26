@@ -85,6 +85,40 @@ hr {
     list-style-type:none;
 }
 
+.cities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 2%;
+    width: 50%;
+    height: 100%;
+    min-height: 75px;
+    padding: 12px;
+    line-height: 60px;
+    margin: 16px;
+    font-size: 200%;
+    list-style-type:none;    
+}
+
+.sights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 2%;
+    width: 50%;
+    height: 100%;
+    min-height: 75px;
+    padding: 12px;
+    line-height: 60px;
+    margin: 16px;
+    font-size: 200%;
+    list-style-type:none;
+}
+
 .single_container {
     display: flex;
     justify-content: center;
