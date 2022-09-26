@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 
 import repositories.country_repository as country_repository
 
+from models.sight import Sight
 from models.city import City
 from models.country import Country
 import pdb
@@ -63,3 +64,15 @@ def select_country_by_city(id):
         for row in country:
             country = Country(row['country_name'], row['is_visited'], row['id'])
     return country
+
+def select_all_sights_from_city(id):
+    sights = []
+    sql = "SELECT * FROM sights WHERE city_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        city = select(row['city_id'])
+        sight = Sight(row['sight_name'], row['is_visited'], city, row['id'])
+        sights.append(sight)
+    return sights
