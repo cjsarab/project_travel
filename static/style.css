@@ -18,6 +18,66 @@ hr {
     color: white;
 }
 
+.add-city .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.add-city .material-symbols-outlined:hover {
+    background-color: lime;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.add-sight .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.add-sight .material-symbols-outlined:hover {
+    background-color: lime;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.edit .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    background-color: goldenrod;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.edit .material-symbols-outlined:hover {
+    background-color:gold;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .menu {
     display: flex;
     flex-direction: row;
@@ -41,7 +101,8 @@ hr {
     background-color:firebrick;
     color:black;
     border-radius: 2px;
-    width: 100%;
+    width: 94%;
+    margin-left: 4px;
 }
 
 .delete-form .material-symbols-outlined:hover {
@@ -56,8 +117,7 @@ hr {
     width: 100%;
     height: 100%;
     min-height: 75px;
-    padding: 36px;
-    line-height: 60px;
+    line-height: 360px;
     margin: 0;
 }
 
@@ -78,7 +138,6 @@ hr {
     width: 50%;
     height: 100%;
     min-height: 75px;
-    padding: 12px;
     line-height: 60px;
     margin: 16px;
     font-size: 200%;
@@ -138,4 +197,22 @@ hr {
 
 .red-text {
     color: firebrick;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+    color: black;
+    width: 50%;
+    min-height: 32px;
+    margin-left: 25%;
+    padding:0%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: chocolate;
 }

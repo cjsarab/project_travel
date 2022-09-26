@@ -10,7 +10,12 @@
     <span class="red-text">Not Visited</span>
     {% endif %}
     
-    <li title="Edit"><a href="/sights/{{sight.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+    <li title="Edit" class="edit"><a href="/sights/{{sight.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+    <div>
+        <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+            <button class="material-symbols-outlined">delete</button>
+        </form>
+    </div>
 
 </div>
 

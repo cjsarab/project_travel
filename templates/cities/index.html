@@ -7,6 +7,15 @@
 <div class="cities">
     <div class="content">
         <a href="/cities/{{city.id}}">{{city.city_name}}</a>
+
+        <div>
+            {% if city.is_visited %}
+            <span class="green-text">Visited </span>
+            {% else %}
+            <span class="red-text">Not Visited</span>
+            {% endif %}
+        </div>
+
         <div>
             <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
                 <button class="material-symbols-outlined">delete</button>

@@ -7,6 +7,15 @@
 <div class="sights">
     <div class="content">
         <a href="/sights/{{sight.id}}">{{sight.sight_name}}</a>
+
+        <div>
+            {% if sight.is_visited %}
+            <span class="green-text">Visited </span>
+            {% else %}
+            <span class="red-text">Not Visited</span>
+            {% endif %}
+        </div>
+
         <div>
             <form class="delete-form" action="/sights/{{sight.id}}/delete" method="POST">
                 <button class="material-symbols-outlined">delete</button>

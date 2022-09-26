@@ -4,7 +4,8 @@
 
 
 <div class="cities">
-    <li title="Country"><a href="/countries/{{country.id}}">{{country.country_name}}</a>
+    <div>
+    <li title="Country"><a href="/countries/{{country.id}}">{{country.country_name}}</a></li>
     <br>
     {{city.city_name}}: 
     {% if city.is_visited %}
@@ -12,6 +13,7 @@
     {% else %}
     <span class="red-text">Not Visited</span>
     {% endif %}
+    </div>
 
     <div>
         Sights: 
@@ -19,8 +21,16 @@
         <li title="Sights"><a href="/sights/{{sight.id}}">{{sight.sight_name}}</a></li>
         {% endfor %}
     </div>
-    <li title="Edit"><a href="/cities/{{city.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
-    <li title="New Sight"><a href="/sights/new"><span class="material-symbols-outlined">add_location</span></a></li>
+    <div>
+    <li title="Edit" class ="edit"><a href="/cities/{{city.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+    <li title="New Sight" class="add-sight"><a href="/sights/new"><span class="material-symbols-outlined">add_location</span></a></li>
+    </div>
+
+    <div>
+        <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+            <button class="material-symbols-outlined">delete</button>
+        </form>
+    </div>
 
 </div>
 
