@@ -1,6 +1,6 @@
 from http.client import USE_PROXY
 from flask import Flask, render_template, request, redirect, Blueprint
-from repositories import country_repository, city_repository
+from repositories import country_repository, city_repository, sight_repository
 from models.country import Country
 from models.city import City
 
@@ -29,7 +29,9 @@ def create_city():
 @cities_blueprint.route("/cities/<id>")
 def show_city(id):
     city = city_repository.select(id)
-    return render_template("cities/show.html", city = city)
+    country = city_repository.select_country_by_city(id)
+    sights = sight_repository.select_all_sights_from_city(id)
+    return render_template("cities/show.html", city=city, country=country, sights=sights)
 
 @cities_blueprint.route("/cities/<id>/edit")
 def edit_city(id):

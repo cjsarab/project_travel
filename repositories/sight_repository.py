@@ -47,3 +47,15 @@ def delete(id):
 def delete_all():
     sql = "DELETE FROM sights"
     run_sql(sql)
+
+def select_all_sights_from_city(id):
+    sights = []
+    sql = "SELECT * FROM sights WHERE city_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        city = select(row['city_id'])
+        sight = Sight(row['sight_name'], row['is_visited'], city, row['id'])
+        sights.append(sight)
+    return sights

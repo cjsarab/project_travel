@@ -17,6 +17,15 @@
         </select>
     </div>
 
+    <div>
+        <label for="country">Country</label>
+        <select name="country_id" id="country">
+            {% for country in all_countries %}
+                <option value="{{ country.id }}">{{ country.country_name }} </option>
+            {% endfor %}
+        </select>
+    </div>
+
     <button type="submit">Update City</button>
 
 </form>
