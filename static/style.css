@@ -9,6 +9,18 @@ hr {
     border: 2px solid black;
 }
 
+.homepage {
+    font-size: x-large;
+}
+
+.homepage h1 {
+    color: white;
+}
+
+.homepage h2 {
+    color: black;
+}
+
 .material-symbols-outlined {
     font-size: 200%;
     color: black;
