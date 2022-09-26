@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for sight in all_sights %}
+
+<div class="sights">
+    <div class="content">
+        <a href="/sights/{{sight.id}}">{{sight.sight_name}}</a>
+        <div>
+            <form class="delete-form" action="/sights/{{sight.id}}/delete" method="POST">
+                <button class="material-symbols-outlined">delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endfor%}
+
+{% endblock %}

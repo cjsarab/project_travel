@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <div class="sights">
+    <form action="/sights" method="POST">
+        <div>
+            <label for="sight_name">Sight Name: </label>
+            <input type="text" name="sight_name" id="sight_name" required autofocus>
+        </div>
+
+        <div>
+            <label for="is_visited">Visited</label>
+            <select id="is_visited" name="is_visited">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="city">City</label>
+            <select name="city_id" id="city">
+                {% for city in all_cities %}
+                    <option value="{{ city.id }}">{{ city.city_name }} </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div>
+            <button type="submit">Add Sight</button>
+        </div>
+    </form>
+    </div>
+
+{% endblock  %}
