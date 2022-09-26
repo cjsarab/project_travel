@@ -4,8 +4,9 @@
 
 
 <div class="cities">
-    {{city.city_name}} - {{country.country_name}}
+    <li title="Country"><a href="/countries/{{country.id}}">{{country.country_name}}</a>
     <br>
+    {{city.city_name}}: 
     {% if city.is_visited %}
     <span class="green-text">Visited </span>
     {% else %}
@@ -13,7 +14,7 @@
     {% endif %}
 
     <div>
-        Sights:
+        Sights: 
         {% for sight in sights %}
         <li title="Sights"><a href="/sights/{{sight.id}}">{{sight.sight_name}}</a></li>
         {% endfor %}

@@ -57,3 +57,11 @@ def select_all_cities_from_country(id):
         city = City(row['city_name'], row['is_visited'], country, row['id'])
         cities.append(city)
     return cities
+
+def set_country_visited_true_if_city_visited_true(id):
+    cities = select_all_cities_from_country(id)
+    for city in cities:
+        if city.is_visited:
+            sql = "UPDATE countries SET is_visited = %s WHERE id = %s"
+            values = [True, id]
+            run_sql(sql, values)

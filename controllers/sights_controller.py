@@ -29,7 +29,7 @@ def create_sight():
 def show_sight(id):
     sight = sight_repository.select(id)
     city = sight_repository.select_city_by_sight(id)
-    return render_template("sights/show.html", sight = sight, city = city)
+    return render_template("sights/show.html", sight=sight, city=city)
 
 @sights_blueprint.route("/sights/<id>/edit")
 def edit_sight(id):

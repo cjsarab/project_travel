@@ -2,10 +2,8 @@
 
 {% block content %}
 
-
 <div class="sights">
-    {{sight.sight_name}} - {{city.city_name}}
-    <br>
+    {{sight.sight_name}}: 
     {% if sight.is_visited %}
     <span class="green-text">Visited </span>
     {% else %}

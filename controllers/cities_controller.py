@@ -31,6 +31,7 @@ def show_city(id):
     city = city_repository.select(id)
     country = city_repository.select_country_by_city(id)
     sights = city_repository.select_all_sights_from_city(id)
+    city_repository.set_city_visited_true_if_sight_visited_true(id)
     return render_template("cities/show.html", city=city, country=country, sights=sights)
 
 @cities_blueprint.route("/cities/<id>/edit")

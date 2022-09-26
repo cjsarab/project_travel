@@ -76,3 +76,11 @@ def select_all_sights_from_city(id):
         sight = Sight(row['sight_name'], row['is_visited'], city, row['id'])
         sights.append(sight)
     return sights
+
+def set_city_visited_true_if_sight_visited_true(id):
+    sights = select_all_sights_from_city(id)
+    for sight in sights:
+        if sight.is_visited:
+            sql = "UPDATE cities SET is_visited = %s WHERE id = %s"
+            values = [True, id]
+            run_sql(sql, values)
