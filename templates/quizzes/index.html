@@ -2,6 +2,14 @@
 
 {% block content %}
 
-This is quizzes
+
+<h1>Welcome to quizzes!</h1>
+
+{{city.city_name}} belongs to {{country.country_name}}
+
+    <select id="is_correct" name="is_correct">
+        <option value="true">True</option>
+        <option value="false">False</option>
+    </select>
 
 {% endblock %}

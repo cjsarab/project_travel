@@ -12,6 +12,7 @@ body {
     padding: 0;
 }
 
+
 main {
     background-color: red;
     border: 2px solid black;
@@ -158,6 +159,13 @@ hr {
     flex-direction: column;
 }
 
+.container .content .text {
+    display: flex;
+    color: white;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
 .countries{
     display: flex;
     flex-direction: column;
@@ -245,4 +253,8 @@ hr {
 
 .button:hover {
     background-color: gold;
+}
+
+.link {
+    font-size: normal;
 }
