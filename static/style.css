@@ -5,6 +5,24 @@ body {
     margin: 0;
 }
 
+.facts {
+    font-size: x-large;
+    color: white;
+    display: flex;
+    padding: 0;
+}
+
+main {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 2%;
+    width: 60%;
+    max-height:256px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
 hr {
     border: 2px solid black;
 }
@@ -226,5 +244,5 @@ hr {
 }
 
 .button:hover {
-    background-color: chocolate;
+    background-color: gold;
 }

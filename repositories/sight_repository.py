@@ -63,3 +63,10 @@ def select_city_by_sight(id):
             city = City(row['city_name'], row['is_visited'], row['id'])
     return city
 
+def total_visited_sights():
+    sights = select_all()
+    visited_sights = []
+    for sight in sights:
+        if sight.is_visited == True:
+            visited_sights.append(sight)
+    return visited_sights

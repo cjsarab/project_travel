@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 
 from models.country import Country
 from models.city import City
+from repositories import city_repository
 
 def save(country):
     sql = "INSERT INTO countries (country_name, is_visited) VALUES (%s, %s) RETURNING *"
@@ -65,3 +66,18 @@ def set_country_visited_true_if_city_visited_true(id):
             sql = "UPDATE countries SET is_visited = %s WHERE id = %s"
             values = [True, id]
             run_sql(sql, values)
+
+# def find_country_with_most_cities():
+#     cities = city_repository.select_all
+#     count = 0
+#     for city in cities:
+#         count += 1
+#         if city.country_id =
+
+def total_visited_countries():
+    countries = select_all()
+    visited_countries = []
+    for country in countries:
+        if country.is_visited == True:
+            visited_countries.append(country)
+    return visited_countries

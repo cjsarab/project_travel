@@ -21,3 +21,4 @@ CREATE TABLE sights (
     is_visited BOOLEAN DEFAULT false,
     city_id INT NOT NULL REFERENCES cities(id) ON DELETE CASCADE
 );
+

@@ -84,3 +84,11 @@ def set_city_visited_true_if_sight_visited_true(id):
             sql = "UPDATE cities SET is_visited = %s WHERE id = %s"
             values = [True, id]
             run_sql(sql, values)
+
+def total_visited_cities():
+    cities = select_all()
+    visited_cities = []
+    for city in cities:
+        if city.is_visited == True:
+            visited_cities.append(city)
+    return visited_cities
