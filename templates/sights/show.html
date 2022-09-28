@@ -3,22 +3,23 @@
 {% block content %}
 
 <div class="main">
+    <div>
     {{sight.sight_name}}: 
     {% if sight.is_visited %}
-    <span class="green-text">Visited </span>
+    <span class="green-text">Visited</span>
     {% else %}
     <span class="red-text">Not Visited</span>
     {% endif %}
-    
-    <li title="Edit" class="edit"><a href="/sights/{{sight.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+    </div>
+
     <div>
+    <li title="Edit" class="edit"><a href="/sights/{{sight.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
         <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
             <button class="material-symbols-outlined">delete</button>
         </form>
     </div>
-    <div class="link"><a href="https://en.wikipedia.org/wiki/{{sight.sight_name}}" target = "_blank">Wiki</a></div>
 
-
+    <div class="link"><a href="https://en.wikipedia.org/wiki/{{sight.sight_name}}" target="_blank">Wiki</a></div>
 </div>
 
 {% endblock %}

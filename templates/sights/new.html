@@ -3,7 +3,7 @@
 {% block content %}
 
 
-    <div class="main">
+<div class="main">
     <form action="/sights" method="POST">
         <div>
             <label for="sight_name">Sight Name: </label>
@@ -25,19 +25,10 @@
             </select>
         </div>
 
-        <!-- <div>
-            <label for="city">City</label>
-            <select name="city_id" id="city">
-                {% for city in all_cities %}
-                    <option value="{{ city.id }}">{{ city.city_name }} </option>
-                {% endfor %}
-            </select>
-        </div> -->
-
         <div>
             <button class="button" type="submit">Add Sight</button>
         </div>
     </form>
-    </div>
+</div>
 
 {% endblock  %}
