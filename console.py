@@ -1,5 +1,3 @@
-import pdb
-
 from models.country import Country
 from models.city import City
 from models.sight import Sight
@@ -33,8 +31,6 @@ sight_repository.save(sight_2)
 sight_3 = Sight("Trevi Fountain", False, city_3)
 sight_repository.save(sight_3)
 
-# country_repository.select_all()
-# city_repository.select_all()
-# sight_repository.select_all()
-
-
+country_repository.select_all()
+city_repository.select_all()
+sight_repository.select_all()
