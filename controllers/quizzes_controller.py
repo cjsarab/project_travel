@@ -1,5 +1,5 @@
 from http.client import USE_PROXY
-from flask import Flask, render_template, request, redirect, Blueprint
+from flask import Flask, render_template, Blueprint
 from repositories import quizzes_repository
 
 quizzes_blueprint = Blueprint("quizzes", __name__)

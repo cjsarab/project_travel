@@ -1,6 +1,6 @@
 from http.client import USE_PROXY
 from flask import Flask, render_template, request, redirect, Blueprint
-from repositories import city_repository, country_repository
+from repositories import country_repository
 from models.country import Country
 
 
