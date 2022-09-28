@@ -1,5 +1,3 @@
-from db.run_sql import run_sql
-
 import random
 from repositories import country_repository, city_repository, sight_repository
 

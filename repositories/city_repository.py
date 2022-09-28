@@ -5,7 +5,8 @@ import repositories.country_repository as country_repository
 from models.sight import Sight
 from models.city import City
 from models.country import Country
-import pdb
+
+
 
 def save(city):
     sql = "INSERT INTO cities (city_name, is_visited, country_id) VALUES (%s, %s, %s) RETURNING *"
