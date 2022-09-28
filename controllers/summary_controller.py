@@ -10,9 +10,6 @@ def summary():
     total_cities = len(city_repository.select_all())
     total_sights = len(sight_repository.select_all())
 
-    # most_cities = country_repository.find_country_with_most_cities()
-    # most_sights = city_repository.find_city_with_most_sights()
-
     visited_countries = len(country_repository.total_visited_countries())
     visited_cities = len(city_repository.total_visited_cities())
     visited_sights = len(sight_repository.total_visited_sights())

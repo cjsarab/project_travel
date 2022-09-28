@@ -1,6 +1,6 @@
 body {
     font-family: lato, sans-serif;
-    background-color: gray;
+    background-color: grey;
     color: black;
     margin: 0;
 }
@@ -10,22 +10,6 @@ body {
     color: white;
     display: flex;
     padding: 0;
-}
-
-
-main {
-    background-color: red;
-    border: 2px solid black;
-    border-radius: 2%;
-    width: 60%;
-    max-height:256px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-}
-
-hr {
-    border: 2px solid black;
 }
 
 .homepage {
@@ -38,68 +22,6 @@ hr {
 
 .homepage h2 {
     color: black;
-}
-
-.material-symbols-outlined {
-    font-size: 200%;
-    color: black;
-}
-
-.material-symbols-outlined:hover {
-    color: white;
-}
-
-.add-city .material-symbols-outlined {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
-    border: 2px solid black;
-    border-radius: 2px;
-    width: 100%;
-    margin-bottom: 16px;
-}
-
-.add-city .material-symbols-outlined:hover {
-    background-color: lime;
-    color: black;
-    transition-duration: 0.2s;
-}
-
-.add-sight .material-symbols-outlined {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration:none;
-    background-color: green;
-    border: 2px solid black;
-    border-radius: 2px;
-    width: 100%;
-    margin-bottom: 16px;
-}
-
-.add-sight .material-symbols-outlined:hover {
-    background-color: lime;
-    color: black;
-    transition-duration: 0.2s;
-}
-
-.edit .material-symbols-outlined {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration:none;
-    background-color: goldenrod;
-    border: 2px solid black;
-    border-radius: 2px;
-    width: 100%;
-    margin-bottom: 16px;
-}
-
-.edit .material-symbols-outlined:hover {
-    background-color:gold;
-    color: black;
-    transition-duration: 0.2s;
 }
 
 .icons {
@@ -125,6 +47,51 @@ hr {
 
 .menu .material-symbols-outlined:hover {
     color: white;
+}
+
+.material-symbols-outlined {
+    font-size: 200%;
+    color: black;
+}
+
+.material-symbols-outlined:hover {
+    color: white;
+}
+
+.add .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.add .material-symbols-outlined:hover {
+    background-color: lime;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.edit .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    background-color: goldenrod;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.edit .material-symbols-outlined:hover {
+    background-color:gold;
+    color: black;
+    transition-duration: 0.2s;
 }
 
 .delete-form .material-symbols-outlined {
@@ -166,7 +133,7 @@ hr {
     justify-content: space-evenly;
 }
 
-.countries{
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,53 +147,6 @@ hr {
     margin: 16px;
     font-size: 200%;
     list-style-type:none;
-}
-
-.cities {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 2%;
-    width: 50%;
-    height: 100%;
-    min-height: 75px;
-    padding: 12px;
-    line-height: 60px;
-    margin: 16px;
-    font-size: 200%;
-    list-style-type:none;    
-}
-
-.sights {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 2%;
-    width: 50%;
-    height: 100%;
-    min-height: 75px;
-    padding: 12px;
-    line-height: 60px;
-    margin: 16px;
-    font-size: 200%;
-    list-style-type:none;
-}
-
-.single_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 2%;
-    width: 100%;
-    height: 100%;
-    min-height: 75px;
-    min-width: 75px;
-    margin: 0
 }
 
 .green-text {
@@ -265,6 +185,7 @@ hr {
     flex-direction: column;
     color: black;
     border: 2px solid black;
+    padding: 16px;
 }
 
 .visited {
@@ -273,4 +194,5 @@ hr {
     flex-direction: column;
     color: black;
     border: 2px solid black;
+    padding: 16px;
 }
