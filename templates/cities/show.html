@@ -2,17 +2,19 @@
 
 {% block content %}
 
-
 <div class="main">
+
     <div>
-    <li title="Country"><a href="/countries/{{country.id}}">{{country.country_name}}</a></li>
-    <br>
-    {{city.city_name}}: 
-    {% if city.is_visited %}
-    <span class="green-text">Visited </span>
-    {% else %}
-    <span class="red-text">Not Visited</span>
-    {% endif %}
+        <li title="Country"><a href="/countries/{{country.id}}">{{country.country_name}}</a></li>
+    </div>
+
+    <div>
+        {{city.city_name}}: 
+        {% if city.is_visited %}
+        <span class="green-text">Visited</span>
+        {% else %}
+        <span class="red-text">Not Visited</span>
+        {% endif %}
     </div>
 
     <div>
@@ -21,9 +23,10 @@
         <li title="Sights"><a href="/sights/{{sight.id}}">{{sight.sight_name}}</a></li>
         {% endfor %}
     </div>
+
     <div>
-    <li title="Edit" class ="edit"><a href="/cities/{{city.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
-    <li title="New Sight" class="add"><a href="/sights/new/{{city.id}}"><span class="material-symbols-outlined">add_location</span></a></li>
+        <li title="Edit" class ="edit"><a href="/cities/{{city.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+        <li title="New Sight" class="add"><a href="/sights/new/{{city.id}}"><span class="material-symbols-outlined">add_location</span></a></li>
     </div>
 
     <div>
@@ -31,8 +34,8 @@
             <button class="material-symbols-outlined">delete</button>
         </form>
     </div>
-    <div class="link"><a href="https://en.wikipedia.org/wiki/{{city.city_name}}" target = "_blank">Wiki</a></div>
 
+    <div class="link"><a href="https://en.wikipedia.org/wiki/{{city.city_name}}" target = "_blank">Wiki</a></div>
 
 </div>
 

@@ -3,7 +3,7 @@
 {% block content %}
 
 
-    <div class="main">
+<div class="main">
     <form action="/cities" method="POST">
         <div>
             <label for="city_name">City Name: </label>
@@ -24,20 +24,11 @@
             <option value="{{country.id}}">{{country.country_name}}</option> 
             </select>
         </div>
-<!-- 
-        <div>
-            <label for="country">Country</label>
-            <select name="country_id" id="country">
-                {% for country in all_countries %}
-                    <option value="{{country.id}}" selected>{{ country.country_name }} </option>
-                {% endfor %}
-            </select>
-        </div> -->
 
         <div>
             <button class="button" type="submit">Add City</button>
         </div>
     </form>
-    </div>
+</div>
 
 {% endblock  %}

@@ -3,12 +3,15 @@
 {% block content %}
 
 <div class="main">
-    {{country.country_name}}:
-    {% if country.is_visited %}
-    <span class="green-text">Visited</span>
-    {% else %}
-    <span class="red-text">Not Visited</span>
-    {% endif %}
+    
+    <div>
+        {{country.country_name}}:
+        {% if country.is_visited %}
+        <span class="green-text">Visited</span>
+        {% else %}
+        <span class="red-text">Not Visited</span>
+        {% endif %}
+    </div>
     
     <div>
         Cities:
@@ -18,8 +21,8 @@
     </div>
 
     <div>
-    <li title="Edit" class="edit"><a href="/countries/{{country.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
-    <li title="New City" class="add"><a href="/cities/new/{{country.id}}"><span class="material-symbols-outlined">add_location</span></a></li>
+        <li title="Edit" class="edit"><a href="/countries/{{country.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
+        <li title="New City" class="add"><a href="/cities/new/{{country.id}}"><span class="material-symbols-outlined">add_location</span></a></li>
     </div>
 
     <div>
