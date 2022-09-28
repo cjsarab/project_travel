@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block content %}        
 
-<main class="content">
-    <header class="facts"> Facts </header>
-        <div class="text">
-            <p>
-            Total countries = {{total_countries}}
-            Total cities = {{total_cities}}
-            Total sights = {{total_sights}}   
-            </p>
-            <!-- Country with most cities = {{most_cities}}
-            City with most sights = {{most_sights}} -->
-            <p>
-            Total visited countries = {{visited_countries}}
-            Total visited cities = {{visited_cities}}
-            Total visited sights = {{visited_sights}}
-            </p>
-        </div>
-</main>
+<div class="countries">
+    <div class="content">
+        <header class="facts"> Facts </header>
+
+            <div class="totals">
+            Total countries = {{total_countries}}.
+            Total cities = {{total_cities}}.
+            Total sights = {{total_sights}}. 
+            </div> 
+
+                <!-- Country with most cities = {{most_cities}}
+                City with most sights = {{most_sights}} -->
+            <div class="visited">
+            Total visited countries = {{visited_countries}}.
+            Total visited cities = {{visited_cities}}.
+            Total visited sights = {{visited_sights}}.
+            </div>
+    </div>
+</div>
 
 
 {% endblock %}

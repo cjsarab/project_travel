@@ -11,10 +11,15 @@ def cities():
     cities = city_repository.select_all()
     return render_template("cities/index.html", all_cities = cities)
 
-@cities_blueprint.route("/cities/new")
-def new_city():
-    all_countries = country_repository.select_all()
-    return render_template("/cities/new.html", all_countries = all_countries)
+# @cities_blueprint.route("/cities/new")
+# def new_city():
+#     all_countries = country_repository.select_all()
+#     return render_template("/cities/new.html", all_countries = all_countries)
+
+@cities_blueprint.route("/cities/new/<id>")
+def new_city_by_country(id):
+    country = country_repository.select(id)
+    return render_template("/cities/new.html", country=country)
 
 @cities_blueprint.route("/cities", methods = ['POST'])
 def create_city():

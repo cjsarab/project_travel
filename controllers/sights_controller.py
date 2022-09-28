@@ -10,10 +10,15 @@ def sights():
     sights = sight_repository.select_all()
     return render_template("sights/index.html", all_sights = sights)
 
-@sights_blueprint.route("/sights/new")
-def new_sight():
-    all_cities = city_repository.select_all()
-    return render_template("/sights/new.html", all_cities = all_cities)
+# @sights_blueprint.route("/sights/new")
+# def new_sight():
+#     all_cities = city_repository.select_all()
+#     return render_template("/sights/new.html", all_cities=all_cities)
+
+@sights_blueprint.route("/sights/new/<id>")
+def new_sight_by_city(id):
+    city = city_repository.select(id)
+    return render_template("/sights/new.html", city=city)
 
 @sights_blueprint.route("/sights", methods = ['POST'])
 def create_sight():
