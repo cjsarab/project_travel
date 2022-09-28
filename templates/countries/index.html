@@ -3,7 +3,6 @@
 {% block content %}
 
 {% for country in all_countries %}
-
 <div class="main">
     <div class="content">
         <a href="/countries/{{country.id}}">{{country.country_name}}</a>
@@ -15,10 +14,6 @@
             <span class="red-text">Not Visited</span>
             {% endif %}
         </div>
-
-        <!-- <div>
-            <img src="https://en.wikipedia.org/wiki/{{country.country_name}}#/media/File:Flag_of_{{country.country_name}}.svg" alt="Flag" height="256px" width="512px">
-        </div> -->
 
         <div>
             <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">

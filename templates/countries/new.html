@@ -2,9 +2,9 @@
 
 {% block content %}
 
-
-    <div class="main">
+<div class="main">
     <form action="/countries" method="POST">
+        
         <div>
             <label for="country_name">Country Name: </label>
             <input type="text" name="country_name" id="country_name" required autofocus>
@@ -22,6 +22,6 @@
             <button class="button" type="submit">Add Country</button>
         </div>
     </form>
-    </div>
+</div>
 
 {% endblock  %}

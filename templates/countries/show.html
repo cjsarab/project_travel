@@ -2,11 +2,10 @@
 
 {% block content %}
 
-
 <div class="main">
     {{country.country_name}}:
     {% if country.is_visited %}
-    <span class="green-text">Visited </span>
+    <span class="green-text">Visited</span>
     {% else %}
     <span class="red-text">Not Visited</span>
     {% endif %}
@@ -17,16 +16,20 @@
         <li title="City"><a href="/cities/{{city.id}}">{{city.city_name}}</a></li>
         {% endfor %}
     </div>
+
     <div>
     <li title="Edit" class="edit"><a href="/countries/{{country.id}}/edit"><span class="material-symbols-outlined">edit</span></a></li>
     <li title="New City" class="add"><a href="/cities/new/{{country.id}}"><span class="material-symbols-outlined">add_location</span></a></li>
     </div>
+
     <div>
         <form class="delete-form" action="/country/{{country.id}}/delete" method="POST">
             <button class="material-symbols-outlined">delete</button>
         </form>
     </div>
+
     <div class="link"><a href="https://en.wikipedia.org/wiki/{{country.country_name}}" target = "_blank">Wiki</a></div>
+</div>
 
 {% endblock %}
 
