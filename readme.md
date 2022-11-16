@@ -6,6 +6,8 @@ It uses CRUD functionality and RESTful routes.
 
 This app is built using Python and Flask with a PostgreSQL database.
 
+<img src="img/homepage.png" alt="homepage">
+
 ### To run:
  
 In terminal:
