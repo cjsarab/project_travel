@@ -6,7 +6,9 @@ It uses CRUD functionality and RESTful routes.
 
 This app is built using Python and Flask with a PostgreSQL database.
 
-<img src="img/homepage.png" alt="homepage">
+<img src="img/homepage.png" alt="homepage" height=50% width=50%>
+<img src="img/countries.png" alt="countries screen" height=50% width=50%>
+<img src="img/edit_country.png" alt="editing a country" height=50% width=50%>
 
 ### To run:
  
